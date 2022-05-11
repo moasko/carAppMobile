@@ -1,49 +1,33 @@
 import React from 'react';
+import { SafeAreaView } from 'react-native';
 //navigation
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-//screens
-import Home from './screens/Home';
-import Scanner from './screens/Scanner';
-import ScanneResults from './screens/ScanneResults';
-import MapTrack from './screens/MapTrack';
-import InvalidQr from './screens/InvalidQr';
+import Navigator from "./src/navigation/Navigator";
+// redux 
+import { Provider } from 'react-redux';
+import store from './src/redux/store/storeConfiguration'
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
 
 
 
+const App = () => {
 
-const Stack = createNativeStackNavigator();
+  const persistor = persistStore(store);
 
-export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-
-        <Stack.Screen options={{
-          headerShown: false
-        }} name="Home" component={Home} />
-
-        <Stack.Screen options={{
-          headerShown: false
-        }} name="Scanner" component={Scanner} />
-
-        <Stack.Screen name="ScanneResults" 
-        options={{
-          headerShown: false
-        }}
-        component={ScanneResults} />
-
-        <Stack.Screen options={{
-          headerShown: false
-        }} name="MapTrack" component={MapTrack} />
-
-        <Stack.Screen options={{
-          headerShown: false
-        }} component={InvalidQr} name="InvalidQr" />
-        
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Provider store={store}>
+        <NavigationContainer>
+          <PersistGate persistor={persistor}>
+            <Navigator />
+          </PersistGate>
+        </NavigationContainer>
+      </Provider>
+    </SafeAreaView>
   );
 }
 
+
+export default App;
 

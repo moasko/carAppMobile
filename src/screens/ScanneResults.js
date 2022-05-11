@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, ActivityIndicator, Image, Linking, ScrollView, Share, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { getCarInfos, getCarImages } from '../backend/carinfos';
+import { getCarInfos } from '../backend/carinfos';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Lightbox from 'react-native-lightbox-v2';
 import { useIsFocused } from '@react-navigation/native';
@@ -146,7 +146,7 @@ function ScanneResults({ route, navigation }) {
                         Linking.openURL(`tel:170`)
                       }}
                     >
-                      <Image source={require('../assets/police.png')} style={{ width: 60, height: 60 }} />
+                      <Image source={require('../../assets/police.png')} style={{ width: 60, height: 60 }} />
                       <Text style={styles.urgenceText}>Police</Text>
                     </TouchableOpacity>
 
@@ -156,7 +156,7 @@ function ScanneResults({ route, navigation }) {
                         Linking.openURL(`tel:180`)
                       }}
                     >
-                      <Image source={require('../assets/sapeur-pompier.png')} style={{ width: 60, height: 60 }} />
+                      <Image source={require('../../assets/sapeur-pompier.png')} style={{ width: 60, height: 60 }} />
                       <Text style={styles.urgenceText}>Pompiers</Text>
                     </TouchableOpacity>
 
@@ -166,7 +166,7 @@ function ScanneResults({ route, navigation }) {
                       }}
                       style={styles.urgenceCardeItems}
                     >
-                      <Image source={require('../assets/ambulance.png')} style={{ width: 60, height: 60 }} />
+                      <Image source={require('../../assets/ambulance.png')} style={{ width: 60, height: 60 }} />
                       <Text style={styles.urgenceText}>Urgence</Text>
                     </TouchableOpacity>
 
@@ -177,7 +177,7 @@ function ScanneResults({ route, navigation }) {
                       }}
                       style={styles.urgenceCardeItems}
                     >
-                      <Image source={require('../assets/etoile-de-la-vie.png')} style={{ width: 60, height: 60 }} />
+                      <Image source={require('../../assets/etoile-de-la-vie.png')} style={{ width: 60, height: 60 }} />
                       <Text style={styles.urgenceText}>SAMU</Text>
                     </TouchableOpacity>
 

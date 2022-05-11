@@ -80,7 +80,7 @@ function Scanner({ navigation }) {
             <Icon name={flash === Camera.Constants.FlashMode.torch ? "flash-outline" : "flash-off-outline"} size={30} color="#fff" />
           </TouchableOpacity>
         </View>
-        <Image source={require('../assets/qrcc.png')} style={{flex:1, position:"absolute", width: "100%", height: "100%"}}/>
+        <Image source={require('../../assets/qrcc.png')} style={{flex:1, position:"absolute", width: "100%", height: "100%"}}/>
       </Camera>
     ) : null}
       <StatusBar backgroundColor={'#000000'} barStyle={'light-content'} />

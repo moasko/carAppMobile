@@ -25,7 +25,7 @@ const InvalidQr = ({ navigation }) => {
                 elevation: 18,
 
             }}>
-                <Image source={require('../assets/emo.jpg')} style={{ width: 100, height: 100 }} />
+                <Image source={require('../../assets/emo.jpg')} style={{ width: 100, height: 100 }} />
                 <View>
                     <Text style={{
                     fontSize: 25,

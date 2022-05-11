@@ -1,4 +1,4 @@
-import { View, Text,Touchable,TouchableOpacity,StyleSheet } from 'react-native'
+import { View, Text,Touchable,TouchableOpacity,StyleSheet,StatusBar } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -14,6 +14,7 @@ const CustomHeader = ({navigation}) => {
         <Icon name="share" style={{ marginRight: 20 }} size={20} color="#000" />
 
         </TouchableOpacity>
+        <StatusBar backgroundColor={'#000000'} barStyle={'light-content'} />
     </View>
   )
 }
@@ -30,12 +31,12 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     headerButton: {
-        width: '20%',
+        width: '20%',   
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
         height:40,
-        width:40,
+        width:40, 
         borderRadius:50,
 
     },

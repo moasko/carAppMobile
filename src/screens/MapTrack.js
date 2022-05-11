@@ -3,7 +3,8 @@ import { StyleSheet, View, Dimensions, TouchableOpacity, Text, ScrollView } from
 import MapView, { Marker, Polyline } from 'react-native-maps'
 import MapViewDirections from 'react-native-maps-directions';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import { API_KEY } from '../constents';
+import { API_KEY } from '../constants/constants';
+
 
 
 const MapTrack = () => {
